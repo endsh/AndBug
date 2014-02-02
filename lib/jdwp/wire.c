@@ -16,8 +16,14 @@
 #include "wire.h"
 #include <string.h>
 #include <stdlib.h>
-#include <arpa/inet.h>
 #include <stdarg.h>
+
+#ifdef _WIN32
+#include <winsock2.h>
+#pragma comment(lib, "WS2_32.Lib")
+#else
+#include <arpa/inet.h>
+#endif
 
 // Thank you, POSIX, for your shortsightedness, Linux for your haste, and BSD
 // for being as bad as Linux.  Can a brother get a standards update around 
@@ -39,7 +45,7 @@
 #  define htonll(x) __DARWIN_OSSwapInt64(x)
 #  define ntohll(x) __DARWIN_OSSwapInt64(x)
 #else
-#  error "must define htonll/ntohll for this platform"
+#  //error "must define htonll/ntohll for this platform"
 #endif
 
 char *jdwp_en_errors[] = {

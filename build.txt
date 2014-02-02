@@ -1,0 +1,9 @@
+running install
+running build
+running build_py
+running build_ext
+building 'andbug.jdwp' extension
+C:\MinGW\bin\gcc.exe -mdll -O -Wall -IC:\Python27\include -IC:\Python27\PC -c lib/jdwp/jdwp.c -o build\temp.win-amd64-2.7\Release\lib\jdwp\jdwp.o
+C:\MinGW\bin\gcc.exe -mdll -O -Wall -IC:\Python27\include -IC:\Python27\PC -c lib/jdwp/wire.c -o build\temp.win-amd64-2.7\Release\lib\jdwp\wire.o
+writing build\temp.win-amd64-2.7\Release\lib\jdwp\jdwp.def
+C:\MinGW\bin\dllwrap.exe -mdll -static --output-lib build\temp.win-amd64-2.7\Release\lib\jdwp\libjdwp.a --def build\temp.win-amd64-2.7\Release\lib\jdwp\jdwp.def -s build\temp.win-amd64-2.7\Release\lib\jdwp\jdwp.o build\temp.win-amd64-2.7\Release\lib\jdwp\wire.o -LC:\Python27\libs -LC:\Python27\PCbuild\amd64 -lpython27 -lmsvcr90 -o build\lib.win-amd64-2.7\andbug\jdwp.pyd
