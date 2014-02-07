@@ -3,13 +3,19 @@ AndBug For Windows Edit By Endsh
 ================================
 
 windows版本修正了几个小问题
+
 欢迎联系我：438985635@qq.com
 
 win7 64位编译
+
 打开vs tools/vs x64 win64 cmd
+
 cmd：
+
 set DISTUTILS_USE_SDK=1
+
 set MSSdk=1
+
 python setup.py install
 
 =======================================
